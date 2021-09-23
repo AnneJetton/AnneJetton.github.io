@@ -1,0 +1,9 @@
+.head { stroke:black; fill:yellow; stroke-width:5; }
+
+.eyes { stroke:black; fill:white; stroke-width:5; }
+
+.pupils { stroke:black; fill:black; stroke-width:5; }
+
+.eyebrows { stroke:black; stroke-width:5; }
+
+.mouth { stroke:red; fill:black; stroke-width:5; }
