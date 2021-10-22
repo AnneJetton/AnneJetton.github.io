@@ -28,21 +28,21 @@ function bigger(object) {
 }
 
 
-let facebookIcon = iconSpan.append('img').attr('id', "facebook").attr('src', "facebook.png").attr('width', 100).attr('height', 100)
+let facebookIcon = iconSpan.append('img').attr('id', "facebook").attr('src', "facebook3.jpg").attr('width', 100).attr('height', 100)
 	.on('mouseenter', () => mouseIn(facebook, "Facebook"))
 	.on('mouseleave', () => mouseOut(facebook, "Facebook"))
     .on('mousedown', () => smaller(facebook))
     .on('mouseup', () => bigger(facebook))
     .on('dblclick', () => window.open('https://www.facebook.com', '_blank'));
 	
-let twitterIcon = iconSpan.append('img').attr('id', "twitter").attr('src', "twitter.png").attr('width', 100).attr('height', 100)
+let twitterIcon = iconSpan.append('img').attr('id', "twitter").attr('src', "twitter3.jpg").attr('width', 100).attr('height', 100)
 	.on('mouseenter', () => mouseIn(twitter, "Twitter"))
 	.on('mouseleave', () => mouseOut(twitter, "Twitter"))
     .on('mousedown', () => smaller(twitter))
     .on('mouseup', () => bigger(twitter))
     .on('dblclick', () => window.open('https://www.twitter.com', '_blank'));
 	
-let linkedinIcon = iconSpan.append('img').attr('id', "linkedin").attr('src', "linkedin.png").attr('width', 100).attr('height', 100)
+let linkedinIcon = iconSpan.append('img').attr('id', "linkedin").attr('src', "linkedin1.jpg").attr('width', 100).attr('height', 100)
 	.on('mouseenter', () => mouseIn(linkedin, "Linkedin"))
 	.on('mouseleave', () => mouseOut(linkedin, "Linkedin"))
     .on('mousedown', () => smaller(linkedin))
@@ -56,7 +56,7 @@ let redditIcon = iconSpan.append('img').attr('src', "reddit.png").attr('id', "re
     .on('mouseup', () => bigger(reddit))
     .on('dblclick', () => window.open('https://www.reddit.com', '_blank'));
 	
-let instagramIcon = iconSpan.append('img').attr('src', "instagram.png").attr('id', "instagram").attr('width', 100).attr('height', 100)
+let instagramIcon = iconSpan.append('img').attr('src', "instagram1.jpg").attr('id', "instagram").attr('width', 100).attr('height', 100)
 	.on('mouseenter', () => mouseIn(instagram, "Instagram"))
 	.on('mouseleave', () => mouseOut(instagram, "Instagram"))
     .on('mousedown', () => smaller(instagram))
