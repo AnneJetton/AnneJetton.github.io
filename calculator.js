@@ -1,6 +1,4 @@
 
-calculatorLoop();
-
 function calculatorLoop(){
 		let endloop = true;
 		let inputArray = [];
@@ -17,12 +15,12 @@ function calculatorLoop(){
 			
 			//push the stuff to the other functions
 			inputArray.push(mathify(xvalue, operator, yvalue));
-			tableify(inputArray);
 			
 			//check if the potato of a user is done yet.
 			endloop = confirm("Are you done mathing?");
 		}	
-		
+		tableify(inputArray);
+		statsTableify(inputArray);
 		
 }	
 
@@ -78,7 +76,7 @@ function Tableify(inputArray){
 	document.write("</table>");
 }
 
-function statsTable(inputArray) {
+function statsTableify(inputArray) {
 	document.write("<table");
 	document.write("<tr><th>Minimum value</th><th>Maximum value</th><th>Average Value</th><th>Total Value</th>"
 	let tally = 0;
@@ -99,4 +97,6 @@ function statsTable(inputArray) {
 	document.write("<tr><td> + minimumValue + </td><td> + maximumValue + </td><td> + averageValue + </td><td> + totalValue + </td></tr>");
 	document.write("</table>");
 }
+
+calculatorLoop();
 
