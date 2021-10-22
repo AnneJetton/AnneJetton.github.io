@@ -4,8 +4,102 @@
 	<meta charset="UTF-8>
 	<meta name="viewport" content="width=device-width, initial scale=1.0">
 	<title>sign-in form</title>
+	<link href="form.css" rel="stylesheet">
 </head>
 <body>
+	<script src="calculator.js"></script>
 	<h1>Sign-in form</h1>
+	
+	<form name="form">
+	
+	
+	<div>
+		<p>Username: </p>
+		<input type="text" id="username"/>
+	</div>
+	
+	
+	<div>
+		<p>Email: </p>
+		<input type="text" id="email"/>
+	</div>
+	
+	
+	<div>
+		<p>Phone Number: </p>
+		<input type="text" id="phoneNumber"/>
+	</div>
+	
+	
+	<div>
+		<p>Password: </p>
+		<input type="password" id="password"/>
+	</div>
+	
+	
+	<div>
+		<p>Confirm Password: </p>
+		<input type="password" id="cPassword"/>
+	</div>
+	
+	
+	<div>
+		<p>Gender: </p>
+		<div>
+			<p>female</p>
+			<input type="radio" name="female" id="female" />
+			<p>male</p>
+			<input type="radio" name="male" id="male" />
+			<p>other</p>
+			<input type="radio" name="other" id="other" />
+		</div>
+	</div>
+	
+	
+	<div>
+		<p>Birthday: </p>
+		<div>
+			<p>month</p>
+			<select name="month" id="month">
+				<option value="none"></option>
+			</select>
+			<select name="day" id="day">
+				<option value="none"></option>
+			</select>	
+			<select name="year" id="year">
+				<option value="none"></option>
+			</select>
+		</div>
+	</div>
+	
+	
+	<div>
+		<p>Favorite Music Genre</p>
+		<div>
+			<p>pop</p>
+			<input type="checkbox" name="" id="pop">
+			<p>Hiphop</p>
+			<input type="checkbox" name="" id="hiphop">
+			<p>Jazz</p>
+			<input type="checkbox" name="" id="jazz">
+			<p>Rock</p>
+			<input type="checkbox" name="" id="rock">
+			<p>Classical</p>
+			<input type="checkbox" name="" id="classical">
+			<p>Country</p>
+			<input type="checkbox" name="" id="country">
+		</div>
+	</div>
+	
+	
+	<div>
+		<input type="button" name="submit" id="" value="submit" onclick="validate()">
+		<input type="reset" name="clear" id="" value="clear" onclick="error("remove", "")">
+	</div>
+	
+	
+	<div id="warning">
+		
+	</div>
 </body>
 </html>

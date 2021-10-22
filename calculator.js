@@ -1,29 +1,5 @@
 
-function calculatorLoop(){
-		let endloop = true;
-		let inputArray = [];
 	
-		while(endloop){
-			//get the stuff
-			let susXValue = prompt("please enter a value for x:", "");
-			let operator = prompt("please enter a valid operator:", "");
-			let susYValue = prompt("please enter a value for y:", "");
-			
-			//change the stuff
-			xvalue = parseFloat(susXValue);
-			yvalue = parseFloat(susYValue);
-			
-			//push the stuff to the other functions
-			inputArray.push(mathify(xvalue, operator, yvalue));
-			
-			//check if the potato of a user is done yet.
-			endloop = confirm("Are you done mathing?");
-		}	
-		tableify(inputArray);
-		statsTableify(inputArray);
-		
-}	
-
 function mathify(xvalue, operator, yvalue){
 	let userHasABrainCell = !isNaN(xvalue);
 	let userHas2BrainCells = !isNaN(yvalue);
@@ -98,5 +74,25 @@ function statsTableify(inputArray) {
 	document.write("</table>");
 }
 
-calculatorLoop();
+let endloop = true;
+let inputArray = [];
+	
+while(endloop){
+	//get the stuff
+	let susXValue = prompt("please enter a value for x:", "");
+	let operator = prompt("please enter a valid operator:", "");
+	let susYValue = prompt("please enter a value for y:", "");
+			
+	//change the stuff
+	xvalue = parseFloat(susXValue);
+	yvalue = parseFloat(susYValue);
+			
+	//push the stuff to the other functions
+	inputArray.push(mathify(xvalue, operator, yvalue));
+			
+	//check if the potato of a user is done yet.
+	endloop = confirm("Are you done mathing?");
+}	
+tableify(inputArray);
+statsTableify(inputArray);
 
