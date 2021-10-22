@@ -4,31 +4,32 @@ function mathify(xvalue, operator, yvalue){
 	let userHasABrainCell = !isNaN(xvalue);
 	let userHas2BrainCells = !isNaN(yvalue);
 	let returnableStuff = [];
+	let solution = 0;
 	
 	if (userHasABrainCell && userHas2BrainCells){
 		switch (operatorVal) {
 			case "+":
-				let solution = xvalue + yvalue;
+				solution = xvalue + yvalue;
 				returnableStuff = [xvalue, operator, yvalue, solution];
 				break;
 			case "-":
-				let solution = xvalue - yvalue;
+				solution = xvalue - yvalue;
 				returnableStuff = [xvalue, operator, yvalue, solution];
 				break;
 			case "*":
-				let solution = xvalue * yvalue;
+				solution = xvalue * yvalue;
 				returnableStuff = [xvalue, operator, yvalue, solution];
 				break;
 			case "/":
 				if (yvalue === 0){
 					returnableStuff = [xvalue, operator, yvalue, "Computation Error"];
 				}else{
-					let solution = xvalue / yvalue;
+					solution = xvalue / yvalue;
 					returnableStuff = [xvalue, operator, yvalue, solution];
 				}
 				break;
 			case "%":
-				let solution = xvalue % yvalue;
+				solution = xvalue % yvalue;
 				returnableStuff = [xvalue, operator, yvalue, solution];
 				break;
 			default:
@@ -54,7 +55,7 @@ function Tableify(inputArray){
 
 function statsTableify(inputArray) {
 	document.write("<table");
-	document.write("<tr><th>Minimum value</th><th>Maximum value</th><th>Average Value</th><th>Total Value</th>"
+	document.write("<tr><th>Minimum value</th><th>Maximum value</th><th>Average Value</th><th>Total Value</th>");
 	let tally = 0;
 	let mininumValue = Infinity;
 	let MaximumValue = 0;
