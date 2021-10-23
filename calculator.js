@@ -7,7 +7,7 @@ function mathify(xvalue, operator, yvalue){
 	let solution = 0;
 	
 	if (userHasABrainCell && userHas2BrainCells){
-		switch (operatorVal) {
+		switch (operator) {
 			case "+":
 				solution = xvalue + yvalue;
 				returnableStuff = [xvalue, operator, yvalue, solution];
@@ -44,34 +44,34 @@ function mathify(xvalue, operator, yvalue){
 	return returnableStuff;
 }
 
-function Tableify(inputArray){
+function tableify(inputArray){
 	document.write("<table>");
 	document.write("<tr><th>xvalues</th><th>operator</th><th>yvalues</th><th>solutions</th>");
 	for(let miniArray = 0; miniArray < inputArray.length; miniArray++){
-		document.write("<tr><td> + inputArray[miniArray][0] + </td><td> + inputArray[miniArray][1] + </td><td> + inputArray[miniArray][2] + </td><td> + inputArray[miniArray][3] + </td></tr>");
+		document.write("<tr><td>" + inputArray[miniArray][0] + "</td><td>" + inputArray[miniArray][1] + "</td><td>" + inputArray[miniArray][2] + "</td><td>" + inputArray[miniArray][3] + "</td></tr>");
 	}
 	document.write("</table>");
 }
 
 function statsTableify(inputArray) {
-	document.write("<table");
+	document.write("<table>");
 	document.write("<tr><th>Minimum value</th><th>Maximum value</th><th>Average Value</th><th>Total Value</th>");
 	let tally = 0;
-	let mininumValue = Infinity;
-	let MaximumValue = 0;
+	let minValue = Infinity;
+	let maxValue = 0;
 	let totalValue = 0;
 	
 	for (let miniArray = 0; miniArray < inputArray.length; miniArray++){
 		if(!isNaN(inputArray[miniArray][3])){
 			totalValue = totalValue + inputArray[miniArray][3];
-			if(minimumValue > inputArray[miniArray][3]){minimumValue = inputArray[miniArray][3];}
-			if(maximumValue < inputArray[miniArray][3]){maximumValue = inputArray[miniArray][3];}
+			if(minValue > inputArray[miniArray][3]){minValue = inputArray[miniArray][3];}
+			if(maxValue < inputArray[miniArray][3]){maxValue = inputArray[miniArray][3];}
 			tally++;
 		}	
 	}	
 	
 	let averageValue = totalValue/tally;
-	document.write("<tr><td> + minimumValue + </td><td> + maximumValue + </td><td> + averageValue + </td><td> + totalValue + </td></tr>");
+	document.write("<tr><td>" + minValue + "</td><td>" + maxValue + "</td><td>" + averageValue + "</td><td>" + totalValue + "</td></tr>");
 	document.write("</table>");
 }
 
